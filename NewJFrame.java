@@ -25,7 +25,7 @@ public class NewJFrame extends javax.swing.JFrame {
     public void Connect() {
         try {
             Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/your_database", "root", "nitin");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/invoice", "root", "nitin");
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
