@@ -1,0 +1,2 @@
+javac -cp ".;mysql-connector-java-8.0.xx.jar;jcalendar-1.4.jar" NewJFrame.java
+java -cp ".;mysql-connector-java-8.0.xx.jar;jcalendar-1.4.jar" NewJFrame
