@@ -1,0 +1,29 @@
+Sample.py is to understand how a fastapi runs
+db.py is to understand how py interacts with postgresql
+
+Sample.py 
+
+from fastapi import FastAPI - import statements
+app = FastAPI() - data hiding
+@app.get("/") - url mapping
+async def root(): - function name
+    return {"message":"Hello World!"} - function definition
+
+db.py
+
+import psycopg2 - postgresql database adapter for python 
+import creds - to import the credentials file, this file is not being uploaded to the repo for security reasons
+conn = psycopg2.connect(
+    host="localhost",         
+    database="ledgerly",
+    user=creds.username,
+    password=creds.password,
+    port=5432                 
+)
+cur = conn.cursor()
+cur.execute("SELECT * FROM transactions")
+rows = cur.fetchall()
+for row in rows:
+    print(row)
+cur.close()
+conn.close()
