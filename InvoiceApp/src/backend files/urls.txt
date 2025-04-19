@@ -1,3 +1,5 @@
 http://127.0.0.1:8000/redoc - to get all the info about apis routes
 http://127.0.0.1:8000/ - initial route
 http://127.0.0.1:8000/dbdata - to fetchall the data from db
+http://127.0.0.1:8000/dbupdt - to update the data based on uid
+http://127.0.0.1:8000/dbadd - to add the data
